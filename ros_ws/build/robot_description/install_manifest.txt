@@ -1,5 +1,8 @@
+/ros_ws/install/robot_description/share/robot_description/description/robot_test.xacro
 /ros_ws/install/robot_description/share/robot_description/description/robot.urdf.xacro
 /ros_ws/install/robot_description/share/robot_description/description/robot_core.xacro
+/ros_ws/install/robot_description/share/robot_description/description/inertia_macros.xacro
+/ros_ws/install/robot_description/share/robot_description/launch/sim.launch.py
 /ros_ws/install/robot_description/share/robot_description/launch/display.launch.py
 /ros_ws/install/robot_description/share/robot_description/rviz/rviz.rviz
 /ros_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
