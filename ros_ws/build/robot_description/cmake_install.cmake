@@ -47,6 +47,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/ros_ws/src/robot_description/description"
     "/ros_ws/src/robot_description/launch"
     "/ros_ws/src/robot_description/rviz"
+    "/ros_ws/src/robot_description/config"
     )
 endif()
 

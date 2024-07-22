@@ -1,0 +1,3 @@
+[console_scripts]
+control = robot_control.control_node:main
+

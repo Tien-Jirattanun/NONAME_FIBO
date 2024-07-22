@@ -56,11 +56,11 @@
             <origin xyz="0.0 0.0 0.0" />
         </xacro:inertial_box>
 
-        <gazebo reference="chassis_link">
-            <material>Gazebo/Red</material>
-        </gazebo>
-
     </link>
+
+    <gazebo reference="chassis_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
 
     <!-- Wheel front left -->
 
@@ -337,7 +337,6 @@
     <gazebo reference="wheel_rr_link">
         <material>Gazebo/Black</material>
     </gazebo>
-
 
 
 </robot>

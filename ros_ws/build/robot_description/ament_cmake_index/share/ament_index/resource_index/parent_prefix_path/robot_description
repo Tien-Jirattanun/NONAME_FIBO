@@ -1,1 +1,1 @@
-/ros_ws/install/robot_description:/opt/ros/humble
+/ros_ws/install/robot_description:/ros_ws/install/robot_control:/ros_ws/install/robot_bringup:/opt/ros/humble
