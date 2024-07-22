@@ -6,7 +6,6 @@ import numpy as np
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 from geometry_msgs.msg import Twist
-from sensor_msgs.msg import Joy
 
 vel_msg = Twist()  # robot velosity
 mode_selection = 0 # 1:opposite phase, 2:in-phase, 3:pivot turn 4: none

@@ -11,6 +11,7 @@ setup.py
 resource/robot_control
 robot_control/__init__.py
 robot_control/control_node.py
+robot_control/teleop.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
