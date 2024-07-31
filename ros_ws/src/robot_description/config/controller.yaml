@@ -38,4 +38,3 @@ forward_position_controller:
     state_interfaces:
       - position
       - effort
-      - velocity

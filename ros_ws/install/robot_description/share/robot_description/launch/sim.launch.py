@@ -82,6 +82,19 @@ def generate_launch_description():
         ],
         output="screen",
     )
+    
+    # effort_controllers = ExecuteProcess(
+    #     cmd=[
+    #         "ros2",
+    #         "control",
+    #         "load_controller",
+    #         "--set-state",
+    #         "active",
+    #         "effort_controllers",
+    #     ],
+    #     output="screen",
+    # )
+
 
     # Launch them all!
     return LaunchDescription(
@@ -91,6 +104,7 @@ def generate_launch_description():
             spawn_entity,
             forward_position_controller,
             forward_velocity_controller,
+            # effort_controllers,
             joint_state_broadcaster
         ]
     )

@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64MultiArray
+from math import pi
 
 class KinematicsPublisher(Node):
     
@@ -18,12 +19,16 @@ class KinematicsPublisher(Node):
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         # varieble
-        self.wheel_vel = [0.0, 0.0, 0.0, 0.0]
-        self.swerve_pos = [0.0, 0.0, 0.0, 0.0]
+        self.wheel_vel = [1.0, 1.0, 1.0, 1.0]
+        self.swerve_pos = [pi/2, pi/2, pi/2, pi/2]
         
-    def timer_callback(self):    
-        self.pub_vel.publish(Float64MultiArray(data=self.wheel_vel))
-        self.pub_pos.publish(Float64MultiArray(data=self.swerve_pos))
+    def timer_callback(self):   
+        vel_msg = Float64MultiArray()
+        pos_msg = Float64MultiArray()
+        vel_msg.data = self.wheel_vel
+        pos_msg.data = self.swerve_pos 
+        self.pub_vel.publish(vel_msg)
+        self.pub_pos.publish(pos_msg)
 
     def cmdvel_callback(self, msg):
         global Vx,Vy,W

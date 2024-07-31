@@ -49,11 +49,11 @@ def generate_launch_description():
             'use_sim_time',
             default_value='false',
             description='Use sim time if true'),
-        Node(
-                package="joint_state_publisher_gui",
-                executable="joint_state_publisher_gui",
-                name="joint_state_publisher",
-            ),
+        # Node(
+        #         package="joint_state_publisher_gui",
+        #         executable="joint_state_publisher_gui",
+        #         name="joint_state_publisher",
+        #     ),
         node_robot_state_publisher,
         rviz
     ])
