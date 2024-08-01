@@ -35,22 +35,21 @@ class KinematicsPublisher(Node):
         Vx = 0.0
         Vy = 0.0
         W = 0.0
+        theta = 0.0
         
         Vy = msg.linear.x
         Vx = msg.linear.y
         W = msg.angular.z
         
-        V = sqrt(Vx**2 + Vy**2)
-        
-        theta = 0.0 
+        V = sqrt(Vx**2 + Vy**2) 
         
         if Vy == 0:
             if Vx > 0:
                 theta = pi/2
-            elif Vy < 0:
+            elif Vx < 0:
                 theta = -pi/2
         else:
-            theta = atan2(Vx/Vy)
+            theta = atan2(Vx,Vy)
                    
         self.wheel_vel = [V, V, V, V]
         self.swerve_pos = [theta, theta, theta, theta]

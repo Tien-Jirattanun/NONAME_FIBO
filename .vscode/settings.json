@@ -1,4 +1,7 @@
 {
     "ros.distro": "humble",
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "system_error": "cpp"
+    }
 }
