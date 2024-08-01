@@ -18,7 +18,8 @@
         </plugin>
 
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>/ros_ws/src/robot_description/config/controller.yaml</parameters>
+            <!-- Change to your computer path -->
+            <parameters>/home/tien/Project/Comp/Comp/ros_ws/src/robot_description/config/controller.yaml</parameters>
         </plugin>
 
     </gazebo>

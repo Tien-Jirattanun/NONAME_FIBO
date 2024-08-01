@@ -25,7 +25,7 @@ endif()
 
 install(
   DIRECTORY description launch rviz config
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 ament_package()
