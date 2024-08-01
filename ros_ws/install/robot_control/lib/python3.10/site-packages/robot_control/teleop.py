@@ -19,8 +19,8 @@ class KinematicsPublisher(Node):
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         # varieble
-        self.wheel_vel = [1.0, 1.0, 1.0, 1.0]
-        self.swerve_pos = [pi/2, pi/2, pi/2, pi/2]
+        self.wheel_vel = [3.14, 3.14, 3.14, 3.14]
+        self.swerve_pos = [pi, pi/2, pi, pi/2]
         
     def timer_callback(self):   
         vel_msg = Float64MultiArray()
