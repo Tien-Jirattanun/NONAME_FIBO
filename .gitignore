@@ -1,4 +1,5 @@
 install
 build
 log
-.vscode
+/.vscode
+/ros_ws/.vscode

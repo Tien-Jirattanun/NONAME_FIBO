@@ -1,4 +1,5 @@
 {
+    // add to gitignore
     "configurations": [
         {
             "name": "Linux",
