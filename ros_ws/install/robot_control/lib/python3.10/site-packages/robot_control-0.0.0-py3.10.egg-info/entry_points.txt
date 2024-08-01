@@ -1,3 +1,0 @@
-[console_scripts]
-teleop = robot_control.teleop:main
-
