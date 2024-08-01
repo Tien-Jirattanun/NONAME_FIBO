@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/gazebo-11",
-                "/usr/include/ignition/math6"
+                "/usr/include/ignition/math6",
+                "/opt/ros/humble/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

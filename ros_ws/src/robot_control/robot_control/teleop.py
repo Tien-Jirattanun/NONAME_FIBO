@@ -3,7 +3,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64MultiArray
-from math import pi
+from math import pi, sqrt, atan2
 
 class KinematicsPublisher(Node):
     
@@ -19,8 +19,8 @@ class KinematicsPublisher(Node):
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         # varieble
-        self.wheel_vel = [3.14, 3.14, 3.14, 3.14]
-        self.swerve_pos = [pi/2, pi/2, pi/2, pi/2]
+        self.wheel_vel = [0.0, 0.0, 0.0, 0.0]
+        self.swerve_pos = [0.0, 0.0, 0.0, 0.0]
         
     def timer_callback(self):   
         vel_msg = Float64MultiArray()
@@ -31,23 +31,30 @@ class KinematicsPublisher(Node):
         self.pub_pos.publish(pos_msg)
 
     def cmdvel_callback(self, msg):
-        global Vx,Vy,W
+
+        Vx = 0.0
+        Vy = 0.0
+        W = 0.0
         
-        Vx = msg.linear.x
-        Vy = msg.linear.y
+        Vy = msg.linear.x
+        Vx = msg.linear.y
         W = msg.angular.z
         
-        # wheel_vel is velocity of each wheel
-        # wheel_vel = [fl, fr, rl, rr]
-        self.wheel_vel = [1.0, 1.0, 1.0, 1.0]
-        # swerve_pos is the position of each swerve position
-        # swerve_pos = [fl, fr, rl, rr]
-        self.swerve_pos = [45.0, 45.0, 0.0, 0.0]
+        V = sqrt(Vx**2 + Vy**2)
         
-        print("Vx : " + str(Vx))
-        print("Vy : " + str(Vy))
-        print("W : " + str(W))
-        print("---------------------------")
+        theta = 0.0 
+        
+        if Vy == 0:
+            if Vx > 0:
+                theta = pi/2
+            elif Vy < 0:
+                theta = -pi/2
+        else:
+            theta = atan2(Vx/Vy)
+                   
+        self.wheel_vel = [V, V, V, V]
+        self.swerve_pos = [theta, theta, theta, theta]
+        
 
 def main(args=None):
     rclpy.init(args=args)
