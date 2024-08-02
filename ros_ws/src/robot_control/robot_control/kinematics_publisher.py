@@ -37,8 +37,8 @@ class KinematicsPublisher(Node):
         W = 0.0
         theta = 0.0
         
-        Vy = msg.linear.x
-        Vx = msg.linear.y
+        Vy = msg.linear.y
+        Vx = msg.linear.x
         W = msg.angular.z
         
         V = sqrt(Vx**2 + Vy**2) 
