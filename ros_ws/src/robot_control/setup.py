@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'teleop = robot_control.teleop:main'
+            'kinematics_publisher = robot_control.kinematics_publisher:main'
         ],
     },
 )
