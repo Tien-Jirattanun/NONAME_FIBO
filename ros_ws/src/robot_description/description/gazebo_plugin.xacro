@@ -35,6 +35,7 @@
                     <param name="max">3.14</param>
                 </command_interface>
                 <state_interface name="velocity" />
+                <state_interface name="position"/>
                 <state_interface name="effort" />
             </joint>
 
@@ -44,6 +45,7 @@
                     <param name="max">3.14</param>
                 </command_interface>
                 <state_interface name="velocity" />
+                <state_interface name="position"/>
                 <state_interface name="effort" />
             </joint>
 
@@ -53,6 +55,7 @@
                     <param name="max">3.14</param>
                 </command_interface>
                 <state_interface name="velocity" />
+                <state_interface name="position"/>
                 <state_interface name="effort" />
             </joint>
 
@@ -62,6 +65,7 @@
                     <param name="max">3.14</param>
                 </command_interface>
                 <state_interface name="velocity" />
+                <state_interface name="position"/>
                 <state_interface name="effort" />
             </joint>
 
