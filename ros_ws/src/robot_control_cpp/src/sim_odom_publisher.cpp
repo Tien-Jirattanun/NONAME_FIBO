@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 
-#include "kinematics_calculation.hpp"
-
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/float64_multi_array.hpp"
 #include "geometry_msgs/msg/twist.hpp"
