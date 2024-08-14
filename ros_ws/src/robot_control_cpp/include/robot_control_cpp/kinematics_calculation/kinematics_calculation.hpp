@@ -17,6 +17,8 @@ public:
 private:
     std::vector<double> wheel_vel_;
     std::vector<double> swerve_pos_;
+    std::vector<double> cross_vector(const std::vector<double> &A, const std::vector<double> &B);
+    std::vector<double> add_vector(const std::vector<double> &A, const std::vector<double> &B);
 };
 
 #endif // KINEMATICS_CALCULATION_H
